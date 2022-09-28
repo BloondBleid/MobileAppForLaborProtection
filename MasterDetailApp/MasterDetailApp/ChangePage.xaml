@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MasterDetailApp.ChangePage"
+             Title="Изменение данных">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="help.png" Clicked="ToolbarItem_Clicked" Text="Помощь"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Label Text="Пожалуйста введите данные для изменения" 
+               VerticalOptions="Start" 
+               HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+                <Label Text="Имя" 
+               VerticalOptions="Start" 
+               HorizontalOptions="StartAndExpand" TextColor="Black"/>
+                <Entry x:Name="EntryName"
+                VerticalOptions="Start" 
+               HorizontalOptions="FillAndExpand" />
+                <Label Text="Фамилия" 
+               VerticalOptions="Start" 
+               HorizontalOptions="StartAndExpand" TextColor="Black"/>
+                <Entry x:Name="EntrySurname"
+                   VerticalOptions="Start" 
+               HorizontalOptions="FillAndExpand" />
+                <Label Text="Отчество" 
+               VerticalOptions="Start" 
+               HorizontalOptions="StartAndExpand" TextColor="Black"/>
+                <Entry x:Name="EntryPatronymic"
+                VerticalOptions="Start" 
+               HorizontalOptions="FillAndExpand" />
+                <Label Text="Email" 
+               VerticalOptions="Start" 
+               HorizontalOptions="StartAndExpand" TextColor="Black"/>
+                <Entry x:Name="EntryEmail"
+                VerticalOptions="Start" 
+               HorizontalOptions="FillAndExpand" />
+                <Label Text="Логин" 
+               VerticalOptions="Start" 
+               HorizontalOptions="StartAndExpand" TextColor="Black"/>
+                <Entry x:Name="EntryLogin"
+                VerticalOptions="Start" 
+               HorizontalOptions="FillAndExpand" />
+                <Label Text="Пароль" 
+               VerticalOptions="Start" 
+               HorizontalOptions="StartAndExpand" TextColor="Black"/>
+                <Entry x:Name="EntryPassword1"
+                VerticalOptions="Start" 
+               HorizontalOptions="FillAndExpand" IsPassword="True" />
+                <Label x:Name="RegLabel1"
+                Text="Повторите пароль" 
+               VerticalOptions="Start" 
+               HorizontalOptions="StartAndExpand" TextColor="Black"/>
+                <Entry x:Name="EntryPassword2"
+                VerticalOptions="Start" 
+               HorizontalOptions="FillAndExpand" IsPassword="True" />
+                <Button TextColor = "White" 
+                                CornerRadius="30" 
+                                BackgroundColor = "#3498db" 
+                                HorizontalOptions="FillAndExpand" Text="Сохранить" Clicked="Button_Clicked"/>
+                <Button TextColor = "White" 
+                                CornerRadius="30" 
+                                BackgroundColor = "#3498db" 
+                                HorizontalOptions="FillAndExpand" Text="Вернуться" Clicked="Button_Clicked1"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

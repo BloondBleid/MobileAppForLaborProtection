@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MasterDetailApp.News"
+             Title="Новости">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="help.png" Clicked="ToolbarItem_Clicked" Text="Помощь"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <WebView Source="https://kazan-tr.gazprom.ru/press/news/"/>
+    </ContentPage.Content>
+</ContentPage>

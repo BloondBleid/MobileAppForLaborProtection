@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar"  
+             x:Class="MasterDetailApp.GlobalResultPage"
+             Title="Статистика">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="help.png" Clicked="ToolbarItem_Clicked" Text="Помощь"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            
+            <StackLayout Padding="20">
+                <Label Text="Укажите диапазон дат, используя календари ниже" TextColor="Black"/>
+                <Label Text="1 календарь - дата начала отсчета" TextColor="Black"/>
+                <Label Text="2 календарь - дата окончания отсчета" TextColor="Black"/>
+                <controls:Calendar x:Name="Calendar1"
+                    Padding="10,0,10,0"   
+                   SelectedBorderWidth="4"   
+                   DisabledBorderColor="Black"  
+                   ShowNumberOfWeek="false"  
+                   StartDay="Monday"  
+                   TitleLabelTextColor="#3498db"  
+                   TitleLeftArrowTextColor="LightSkyBlue"  
+                   TitleRightArrowTextColor="CornflowerBlue"/>
+                <controls:Calendar x:Name="Calendar2" Padding="10,0,10,0"   
+                   SelectedBorderWidth="4"   
+                   DisabledBorderColor="Black"  
+                   ShowNumberOfWeek="false"  
+                   StartDay="Monday"  
+                   TitleLabelTextColor="#3498db"  
+                   TitleLeftArrowTextColor="LightSkyBlue" 
+                   TitleRightArrowTextColor="CornflowerBlue"/>
+                    <Button TextColor = "White" 
+                                CornerRadius="30" 
+                                BackgroundColor = "#3498db" 
+                                HorizontalOptions="FillAndExpand" Text="Рассчитать" Clicked="Button_Clicked"/>
+                <Label x:Name="CountQuestionLabel" TextColor="Black"/>
+                <Label x:Name="CountRigthLabel" TextColor="Black"/>
+                <Label x:Name="PercRigthLabel" TextColor="Black"/>
+                <forms:ChartView x:Name="Chart1" HeightRequest="300"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

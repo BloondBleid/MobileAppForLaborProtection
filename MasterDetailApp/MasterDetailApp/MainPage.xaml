@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MasterDetailApp.MainPage"
+             Title="MasterApp">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Master" BackgroundColor="#e6f4ff">
+            <ContentPage.Content>
+                <StackLayout Padding="5,30,5,5">
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="CenterAndExpand"
+                                 Padding="5,30,5,30">
+                        <Image WidthRequest="65" 
+                               HeightRequest="65" 
+                               Aspect="AspectFit" 
+                               Source="approval.png" 
+                               VerticalOptions="Center"></Image>
+                        <Label Text="Добро пожаловать!" 
+                               VerticalOptions="Center" TextColor="Black" FontSize="Large"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="FillAndExpand">
+                        <Button TextColor = "White" 
+                                CornerRadius="30" 
+                                BackgroundColor = "#3498db" 
+                                Text="Проверка знаний" 
+                                Clicked="Button1_Clicked" 
+                                HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="FillAndExpand">
+                        <Button TextColor = "White" 
+                                CornerRadius="30" 
+                                BackgroundColor = "#3498db" 
+                                Text="Теория" 
+                                Clicked="Button2_Clicked" 
+                                HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="FillAndExpand">
+                        <Button TextColor = "White" 
+                                CornerRadius="30" 
+                                BackgroundColor = "#3498db" 
+                                Text="Документы" 
+                                Clicked="Button3_Clicked" 
+                                HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="FillAndExpand">
+                        <Button TextColor = "White" 
+                                CornerRadius="30" 
+                                BackgroundColor = "#3498db" 
+                                Text="О программе" 
+                                Clicked="Button4_Clicked" 
+                                HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="FillAndExpand">
+                        <Button TextColor = "White" 
+                                CornerRadius="30" 
+                                BackgroundColor = "#3498db" 
+                                Text="О предприятии" 
+                                Clicked="Button5_Clicked" 
+                                HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="FillAndExpand">
+                        <Button TextColor = "White" 
+                                CornerRadius="30" 
+                                BackgroundColor = "#3498db" 
+                                Text="Новости" 
+                                Clicked="Button6_Clicked" 
+                                HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="FillAndExpand">
+                        <Button TextColor = "White" 
+                                CornerRadius="30" 
+                                BackgroundColor = "#3498db" 
+                                Text="Выход" 
+                                Clicked="Button7_Clicked" 
+                                HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+                    <!--<Button Text="Проверка знаний" Clicked="Button1_Clicked"></Button>
+                    <Button Text="Теория" Clicked="Button2_Clicked"></Button>
+                    <Button Text="Что необходимо?" Clicked="Button3_Clicked"></Button>
+                    <Button Text="О программе" Clicked="Button4_Clicked"></Button>
+                    <Button Text="О предприятии" Clicked="Button5_Clicked"></Button>
+                    <Button Text="Выход" Clicked="Button6_Clicked"></Button>
+                    <Image WidthRequest="24" HeightRequest="24" Aspect="AspectFit" Source="exam.png" HorizontalOptions="Start"></Image>-->
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            <ContentPage.Content>
+                <Label Text="Хай" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

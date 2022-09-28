@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MasterDetailApp.About"
+             Title="О программе">
+    <ScrollView>
+        <StackLayout HorizontalOptions="CenterAndExpand"
+                 VerticalOptions="FillAndExpand">
+        <StackLayout HorizontalOptions="CenterAndExpand"
+                     VerticalOptions="CenterAndExpand">
+            <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Приложение " 
+                          FontSize="24"  
+                          TextColor="Black"
+                          FontFamily = "Lobster"/>
+                    <Span Text=' "Охрана труда" '
+                          FontSize="24" 
+                          FontAttributes="Bold"
+                          TextColor="Black"
+                          Style="{DynamicResource BodyStyle}"
+                          >
+                    </Span>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Image WidthRequest="140" HeightRequest="120" Aspect="AspectFit" Source="approval.png" VerticalOptions="Center"></Image>
+            <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                <Label
+                Text="* Автор Афанасьев А.А "        
+                FontSize="Default"         
+                TextColor="DarkBlue">
+                </Label>
+                <Label
+                Text="* Email rukuku2222@gmail.com"        
+                FontSize="Default"         
+                TextColor="DarkBlue">
+                </Label>
+                <Label
+                Text="* Версия 1.0"        
+                FontSize="Default"         
+                TextColor="DarkBlue">
+                </Label>
+                <Label
+                Text="* Последнее обновление 10.06.2022"        
+                FontSize="Default"         
+                TextColor="DarkBlue">
+                </Label>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout>
+            <Label Padding="20,10"
+                   LineBreakMode ="CharacterWrap"
+                   HorizontalOptions ="FillAndExpand">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text='"Охрана труда" '
+                          FontSize="Medium"
+                          FontAttributes="Bold"
+                          TextColor="Black"
+                          Style="{DynamicResource BodyStyle}"/>
+                        <Span Text=' - мобильное приложение, используя которое, каждый новый сотрудник сможет самостоятельно проходить обучение в области "Охраны труда".  '
+                          FontSize="Medium"
+                          TextColor="Black"
+                          Style="{DynamicResource BodyStyle}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Padding="20,0"
+                   LineBreakMode ="CharacterWrap"
+                   HorizontalOptions ="FillAndExpand">
+                <Label.FormattedText>
+                    <FormattedString>
+                            <Span Text='Для прохождения тестирования вам необходимо открыть боковое меню и выбрать пункт "Проверка знаний", далее пройти регистрацию, заполнив необходимыми данными форму (Запомните логин и пароль! Они понадобятся для входа в личный кабинет). Затем вы сможете начать тест, выбирая конкретную сложность, просматривать статистику за все попытки прохождения, изменить личные данные, если потребуется.'
+                          FontSize="Medium"
+                          TextColor="Black"
+                          Style="{DynamicResource BodyStyle}"/>
+                        </FormattedString>
+                </Label.FormattedText>
+            </Label>
+                <Label Padding="20,0"
+                   LineBreakMode ="CharacterWrap"
+                   HorizontalOptions ="FillAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text='Все дополнительные материалы вы можете найти используя боковое меню.'
+                          FontSize="Medium"
+                          TextColor="Black"
+                          Style="{DynamicResource BodyStyle}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand"
+                     Padding="20">
+            <Label Text="Казань 2022 г."
+                Padding="20,1"
+                LineBreakMode ="CharacterWrap"
+                HorizontalOptions ="CenterAndExpand"
+                VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

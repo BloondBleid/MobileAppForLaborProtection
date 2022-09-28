@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MasterDetailApp.Testing"
+             Title="Тестирование">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <StackLayout>
+                <Label x:Name ="LabelVar" Text="Выбор сложности" TextColor="Black"/>
+                <Picker x:Name="picker1" SelectedIndexChanged="picker1_SelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>Новичок</x:String>
+                        <x:String>Мастер</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label x:Name ="LabelQuestionName" Text="Вопрос" IsVisible="false" FontSize="Medium" HorizontalOptions="Center" TextColor="Black"/>
+                <Label x:Name ="QuestionLabel" IsVisible="false" FontSize="Default" TextColor="Black"/>
+                    <RadioButton x:Name ="Ans1LabelR" IsVisible="false"  CheckedChanged="Ans1LabelR_CheckedChanged" FontSize="Micro"  TextColor="Black" HeightRequest="65"/>
+                    <RadioButton x:Name ="Ans2LabelR" IsVisible="false"  CheckedChanged="Ans2LabelR_CheckedChanged" FontSize="Micro"  TextColor="Black" HeightRequest="60"/>
+                    <RadioButton x:Name ="Ans3LabelR" IsVisible="false"  CheckedChanged="Ans3LabelR_CheckedChanged" FontSize="Micro"  TextColor="Black" HeightRequest="60"/>
+                    <RadioButton x:Name ="Ans4LabelR" IsVisible="false"  CheckedChanged="Ans4LabelR_CheckedChanged" FontSize="Micro"  TextColor="Black" HeightRequest="60"/>
+                    <RadioButton x:Name ="Ans5LabelR" Content ="Пропустить вопрос" IsVisible="false" CheckedChanged="Ans5LabelR_CheckedChanged" FontSize="Micro"  TextColor="Black"/>
+                </StackLayout>
+                <StackLayout Padding="10">
+                    <Button x:Name="ButtonTesting" 
+                            TextColor = "White" 
+                            CornerRadius="30" 
+                            BackgroundColor = "#3498db" 
+                            HorizontalOptions="FillAndExpand" Text="Продолжить" Clicked="Button_Clicked" IsVisible="false"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

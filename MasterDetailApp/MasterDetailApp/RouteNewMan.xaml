@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MasterDetailApp.RouteNewMan"
+             Title="Документы">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="help.png" Clicked="ToolbarItem_Clicked" Text="Помощь"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="docs" Type="{x:Type x:String}">
+                <x:String>Разрешения на проведение работ в охранных зонах сети газораспределения</x:String>
+                <x:String>Лист ознакомления со сторонами организации 2022</x:String>
+                <x:String>Акт передачи объекта ООО «Газпром трансгаз Казань» для производства работ сторонней организацией</x:String>
+                <x:String>Акт-допуск для производства работ на территории структурного подразделения ООО «Газпром трансгаз Казань» ЭПУ «газ»</x:String>
+                <x:String>(Доп. информация) Ключевые правила безопасности ПАО «ГАЗПРОМ»</x:String>
+                <x:String>(Доп. информация) Политика ПАО «ГАЗПРОМ» в области охраны труда, промышленной и пожарной безопасности, безопасности дорожного движения</x:String>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical" VerticalOptions="Start" Padding="10">
+            <StackLayout Orientation="Vertical" VerticalOptions="Start" HorizontalOptions="Start">
+                <ListView x:Name="DocList1" ItemsSource="{StaticResource Key=docs}" HasUnevenRows="True" ItemSelected="DocList_ItemSelected" SelectionMode="Single">
+                    <ListView.Header>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="10" Spacing="10">
+                            <Label Text="Выберите документ" FontSize="Medium" TextColor="Black"/>
+                        </StackLayout>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0"/>
+                                            <ColumnDefinition Width="0"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="0"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding}" FontSize="Medium" TextColor="Black"/>
+                                    </Grid>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

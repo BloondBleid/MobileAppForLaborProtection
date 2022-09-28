@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MasterDetailApp.LoginPage" 
+             Title="Вход">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="help.png" Clicked="ToolbarItem_Clicked" Text="Помощь"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="0" Padding="15">
+            <Label x:Name="LoginPageLabel"
+               Text="Пожалуйста введите свои данные" 
+               VerticalOptions="Start" 
+               HorizontalOptions="Center" TextColor="Black"/>
+            <StackLayout Padding="20">
+                <Label Text="Логин" 
+               VerticalOptions="Start" 
+               HorizontalOptions="StartAndExpand" TextColor="Black"/>
+                <Entry x:Name="EntryLogin"
+                VerticalOptions="Start" 
+               HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+            <StackLayout Spacing="10" Padding="20">
+                <Label Text="Пароль" 
+               VerticalOptions="Start" 
+               HorizontalOptions="StartAndExpand" TextColor="Black"/>
+                <Entry x:Name="EntryPassword"
+                VerticalOptions="Start" 
+               HorizontalOptions="FillAndExpand" IsPassword="True" />
+                <Button TextColor = "White" 
+                                CornerRadius="30" 
+                                BackgroundColor = "#3498db" 
+                                HorizontalOptions="FillAndExpand" Text="Войти" Clicked="Button_Clicked"/>
+                <Button TextColor = "White" 
+                                CornerRadius="30" 
+                                BackgroundColor = "#3498db" 
+                                HorizontalOptions="FillAndExpand" Text="Регистрация" Clicked="Button_Clicked1"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

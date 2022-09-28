@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MasterDetailApp.Theory" 
+             Title="Теория">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="help.png" Clicked="ToolbarItem_Clicked" Text="Помощь"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout Orientation="Vertical" Padding="10" Spacing="10">
+        <ListView x:Name="ArticlesList" ItemsSource="{Binding}" ItemSelected="ArticlesList_ItemSelected" HasUnevenRows="True" SeparatorVisibility="None" >
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="10" Spacing="10">
+                    <Label Text="Выберите статью" FontSize="Body" TextColor="Black"/>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Height="80" >
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}" FontSize="Body" TextColor="Black"/>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

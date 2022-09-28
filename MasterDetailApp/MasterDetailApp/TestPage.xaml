@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MasterDetailApp.TestPage"
+             Title="Личный кабинет">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="help.png" Clicked="ToolbarItem_Clicked" Text="Помощь"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Padding="20">
+                    <Label x:Name="TestLabel" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+                </StackLayout>
+                <StackLayout Padding="20">
+                    <Button TextColor = "White" 
+                                CornerRadius="30" 
+                                BackgroundColor = "#3498db" 
+                                HorizontalOptions="FillAndExpand" Text="Начать тест" Clicked="Button_Clicked"/>
+                    <Button TextColor = "White" 
+                                CornerRadius="30" 
+                                BackgroundColor = "#3498db" 
+                                HorizontalOptions="FillAndExpand" Text="Статистика" Clicked="Button_Clicked_1"/>
+                    <Button TextColor = "White" 
+                                CornerRadius="30" 
+                                BackgroundColor = "#3498db" 
+                                HorizontalOptions="FillAndExpand" Text="Изменить данные" Clicked="Button_Clicked_3"/>
+                    <Button TextColor = "White" 
+                                CornerRadius="30" 
+                                BackgroundColor = "#3498db" 
+                                HorizontalOptions="FillAndExpand" Text="Выйти из аккаунта" Clicked="Button_Clicked_2"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
